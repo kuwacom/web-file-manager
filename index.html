@@ -1,0 +1,111 @@
+<html lang="ja">
+<body>
+<h1>WEB file manager</h1>
+<div class="fileManager">
+    <!-- <button id="getDir">getDir</button> -->
+    <div class="path">
+        <span><button id="back" type="submit">⇦</button></span><span><button id="next" type="submit">⇨</button></span><input id="path" /><span><button id="search" type="submit">🔍</button></span>
+    </div>
+<div id="files">
+    <div class="tr header"><div class="td">名前</div><div class="td">更新日</div><div class="td">サイズ</div></div>
+</div>
+</div>
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+        color: #ffffff;
+        background-color: #1a2837;
+    }
+    .fileManager {
+        width: 80%;
+        margin: auto;
+    }
+    .fileManager .path {
+        width: 100%;
+        border-top: solid 2px #33506f;
+        border-left: solid 2px #33506f;
+        border-right: solid 2px #33506f;
+        background-color: #33506f;
+    }
+    .fileManager #back {
+        width: 5%;
+    }
+    .fileManager #next {
+        width: 5%;
+    }
+    .fileManager #path {
+        color: #ffffff;
+        width: 85%;
+        border-bottom: 0;
+        border-right: solid 2px #33506f;
+        border-left: solid 2px #33506f;
+        /* border-top: solid 4px #33506f;
+        border-left: solid 4px #33506f;
+        border-right: solid 4px #33506f; */
+        background-color: #24394f;
+    }
+    .fileManager #search {
+        width: 5%;
+    }
+    #files {
+        display:table;
+        /* border-collapse:collapse; */
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border: solid 2px #33506f;
+        background-color: #263d54;
+        font-size: 15px;
+        margin: auto;
+        width: 100%;
+        height: 50%;
+    }
+    .fileManager a {
+        color:#ffffff;
+        text-decoration:none;
+    }
+    .fileManager a:hover {
+        color: #659bd6;
+    }
+    .header .td {
+        border: solid 2px #33506f;
+        border-bottom: solid 4px #33506f;
+        background-color: #2a435d;
+        height: 20px;
+    }
+    .tr {
+        display:table-row;
+        background-color: #263d54;
+    }
+    .td {
+        display:table-cell;
+        width:100px;
+        text-align:center;
+        overflow-x: auto;
+    }
+    .name {
+        text-align: left;
+        border-left: solid 2px #33506f;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .date {
+        text-align: center;
+    }
+    .size {
+        text-align: right;
+        border-right: solid 2px #33506f;
+    }
+
+    #terminal {
+        overflow: hidden;
+        width: 100%;
+        height: 25px;
+        resize: none;
+        background-color: #1a2632;
+        font-size: 20px;
+        color: #ffffff;
+    }
+</style>
